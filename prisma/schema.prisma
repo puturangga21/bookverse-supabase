@@ -19,6 +19,22 @@ model User {
   createdAt DateTime @default(now())
 }
 
+model Book {
+  id              String   @id @default(cuid())
+  bookName        String
+  bookDescription String
+  authorName      String
+  bookReleased    DateTime
+}
+
+model Member {
+  id        String   @id @default(cuid())
+  email     String
+  age       Int
+  gender    Gender
+  createdAt DateTime @default(now())
+}
+
 enum Gender {
   Male
   Female
