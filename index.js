@@ -1,11 +1,8 @@
+import user from './controller/user.js';
 import express from 'express';
-import dotenv from 'dotenv';
 
-dotenv.config();
 const app = express();
 const PORT = 5000;
-
-import user from './controller/user.js';
 
 app.use(express.json());
 
